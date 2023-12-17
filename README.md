@@ -1,4 +1,4 @@
-![Web Audio Visualizer Demo](tor ulven.gif)
+![Web Audio Visualizer Demo](tor-ulven.gif)
 
 # Web Audio Visualizer
 
