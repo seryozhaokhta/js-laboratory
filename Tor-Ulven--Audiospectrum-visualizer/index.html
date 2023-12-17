@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <title>wave</title>
+        <link rel="stylesheet" href="/icons/playPause/playIcon.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div id="translationPanel" class="translation-panel">
+                <img
+                    src="close.svg"
+                    alt="Close"
+                    id="closeIcon"
+                    class="close-icon"
+                >
+            </div>
+            <div class="header-content">
+                <div class="header-icon">
+                    <img src="headerIcon.svg" alt="">
+                    <p id="translationButton">translation</p>
+                </div>
+                <div class="header-title">
+                    <h3>Tor Ulven</h3>
+                </div>
+            </div>
+        </header>
+        <div class="diktContainer">
+            <div class="dikt">
+                <p id="line1">Jeg faller og</p>
+                <p id="line2">faller</p>
+                <p id="line3">ned gjennom</p>
+                <p id="line4">sjakten</p>
+                <p id="line5">i meg selv,</p>
+                <p id="line6">forbi lag</p>
+                <p id="line7">etter lag</p>
+                <p id="line8">av ruinbyer</p>
+                <p id="line9">hvor bare en sovande fangevoktare</p>
+                <p id="line10">er igjen,</p>
+                <p id="line11">forbi førspråklige boplasser</p>
+                <p id="line12">og huleveggen med avtrykk etter</p>
+                <p id="line13">den første hånden: din hånd.</p>
+                <p id="line14">Faller. Faller.</p>
+                <p id="line15">Bunnløs</p>
+                <p id="line16">er jeg likevel</p>
+                <p id="line17">ikke.</p>
+                <p id="line18">Men også bunnen</p>
+                <p id="line19">faller. Og fallet</p>
+                <p id="line20">faller. Ingen</p>
+                <p id="line21">får</p>
+                <p id="line22">det siste</p>
+                <p id="line23">ordet</p>
+            </div>
+        </div>
+        <div class="audioWaveIcons">
+            <audio id="audio-player" src="faller.wav" preload="auto"></audio>
+            <div class="controlsContainer">
+                <button id="play-pause-btn">
+                    <div id="icon-container" style="cursor: pointer;">
+                        <img
+                            id="play-icon"
+                            src="/icons/playPause/play.svg"
+                            alt="Play"
+                            class="icon"
+                        >
+                        <img
+                            id="pause-icon"
+                            src="/icons/playPause/pause.svg"
+                            alt="Pause"
+                            class="icon"
+                            style="display: none;"
+                        >
+                    </div>
+                </button>
+                <button id="reset-btn">
+                    <img
+                        id="reset-icon"
+                        src="/icons/playPause/resetIcon.svg"
+                        alt="Reset"
+                        class="icon"
+                    >
+                </button>
+                <div class="audioContainer">
+                    <div id="audio-wave">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="TextInteractive.js"></script>
+        <script type="module" src="Visualizer.js"></script>
+        <script type="module" src="AudioController.js"></script>
+        <script src="/icons/playPause/resetIconAnimation.js"></script>
+        <script type="module" src="/icons/playPause/playIcon.js"></script>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
