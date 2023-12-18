@@ -1,0 +1,366 @@
+@font-face {
+  font-family: "Helvetica Neue Cyr";
+  src: url("fonts/HelveticaNeueCyr-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Cyr";
+  src: url("fonts/HelveticaNeueCyr-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Helvetica Neue Cyr", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+#language-switch {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.lang-btn {
+  font-size: 0.6rem;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #555;
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  width: 600px;
+  max-width: 720px;
+  margin: 12px;
+}
+
+.date,
+.name {
+  font-size: 16px;
+  color: #666;
+  display: block;
+}
+
+.desc {
+  color: #777;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 12px;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.gallery-container {
+  position: relative;
+  height: calc(100vh - 50px);
+  width: 100%;
+  overflow-x: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.period-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.period-section {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 500px;
+}
+
+.period-section::after {
+  content: "";
+  width: 200px;
+  flex-shrink: 0;
+}
+
+#scroll-left,
+#scroll-right {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  border: none;
+  transform: translateY(-50%);
+  background: transparent;
+}
+
+#scroll-left {
+  left: 10px;
+}
+
+#scroll-right {
+  right: 10px;
+}
+
+.scroll-left {
+  margin-left: -80px;
+}
+
+.scroll-right {
+  margin-right: -80px;
+}
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery,
+  .period-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .title,
+  .desc {
+    margin: 0 auto;
+  }
+
+  .title {
+    width: 95%;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .desc {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  #artistSearch,
+  .scroll-left,
+  .scroll-right {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  cursor: crosshair;
+}
+
+header {
+  display: grid;
+  text-align: justify;
+  padding: 0;
+}
+
+.header-section {
+  width: 100%;
+}
+
+footer {
+  height: auto;
+}
+
+/* .footer-section {
+} */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 5px 0;
+    font-size: 10px;
+  }
+}
+
+#language-buttons {
+  margin-top: 0.25em;
+  display: flex;
+  position: relative;
+}
+
+#btn-no-container {
+  position: relative;
+}
+
+#btn-en,
+#btn-no,
+#btn-ru {
+  margin-right: 0.4em;
+  border-width: 0.02em;
+  border-color: gray;
+  border-radius: 7px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.additional-text {
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateX(100%) translateY(-50%);
+  pointer-events: none;
+}
+
+.button-container {
+  margin-left: 0.5em;
+  display: flex;
+  gap: 0.15em;
+}
+
+.outer-container {
+  display: inline-block;
+  position: relative;
+}
+
+.button-no-horizontal {
+  color: white;
+  opacity: 0.5;
+  margin-left: 0.2em;
+  pointer-events: auto;
+}
+
+@media (min-width: 601px) {
+  .gallery-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.gallery img {
+  position: relative;
+  width: 500px;
+  transition: transform 0.3s ease, margin-bottom 0.3s ease;
+  margin-bottom: 0;
+}
+
+.gallery img:hover {
+  transform: translateY(80px);
+  margin-bottom: 60px;
+}
+
+.caption {
+  font-size: 12px;
+  top: 12px;
+  position: absolute;
+  text-align: left;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -10;
+  white-space: nowrap;
+}
+
+.caption .caption-date {
+  display: block;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+.lang-period-date--proto,
+.lang-period-date--early,
+.lang-period-date--high,
+.lang-period-date--late {
+  margin-top: 15px;
+}
+
+/* .lang-period-name--proto
+.lang-period-name--early,
+.lang-period-name--high,
+.lang-period-name--late {
+
+} */
+
+.period-button {
+  opacity: 0.5;
+  transition: all 0.5 ease-in;
+}
+
+.period-button:hover {
+  opacity: 1;
+}
+
+/* .lang-desc1--proto,
+.lang-desc2--proto,
+.lang-desc1--early,
+.lang-desc2--early,
+.lang-desc1--high,
+.lang-desc2--high,
+.lang-desc1--late,
+.lang-desc2--late {
+} */

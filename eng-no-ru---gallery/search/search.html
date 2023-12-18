@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Поле Поиска с Анимацией</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="search-box">
+            <input type="text" id="search-input" placeholder="">
+            <img src="magniglass.svg" id="search-icon" alt="Поиск">
+            <div id="dropdown-container">
+                <button id="clear-button">
+                    <img src="cross.svg">
+                </button>
+                <div id="dropdown-menu" class="hidden">
+                    <a href="#">Proto-Renaissance</a>
+                    <a href="#">Early Renaissance</a>
+                    <a href="#">High Renaissance</a>
+                    <a href="#">Mannerism</a>
+                </div>
+                <button id="dropdown-button">
+                    <img src="dropolygon.svg">
+                </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
