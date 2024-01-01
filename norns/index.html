@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bezier Curve Animation</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="customCursor.css">
+    </head>
+    <body>
+        <div class="canvas-container">
+            <canvas id="myCanvas"></canvas>
+            <div class="overlay">
+                <header>
+                    <h1>
+                        Norns
+                    </h1>
+                    <h2>
+                        towards the genesis and areal parallels of the image
+                        <img src="svg/circle.svg" alt="">
+                    </h2>
+                    <p>
+                        In ancient Scandinavian mythology, the norns, female beings determining human fate, are central figures. Mentioned in the «Poetic Edda», «Prose Edda», 
+                        and skaldic poetry, they embody the concept of fate as a judgment.
+                        <img src="svg/circle.svg" alt="">
+                        This idea appears in various texts, notably in «Fafnir's Speech» and «The Prophecy of the Seeress», 
+                        where phrases like nornа dómr ('judgment of the norns') highlight their role in deciding human destinies.
+                    </p>
+                </header>
+                <div class="controls">
+                    <label for="numCurves" class="label">threads</label>
+                    <input
+                        type="number"
+                        id="numCurves"
+                        class="num-curves-input"
+                        min="1"
+                        max="10"
+                        value="3"
+                    >
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="customCursor.js"></script>
+    </body>
+</html>

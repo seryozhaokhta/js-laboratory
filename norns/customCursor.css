@@ -1,0 +1,40 @@
+.custom-cursor {
+  position: absolute;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.custom-cursor.animate {
+  animation: pulse 300ms ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(2.5);
+  } /* Увеличиваем масштаб */
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
