@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <img
+            id="author-image"
+            src="img\unnamed.jpg"
+            class="dynamic-image"
+            style="display: none; position: fixed; max-width: 200px; max-height: 200px; border: 1px solid white;"
+        >
+        <title>Ars Poetica</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div id="text-container"></div>
+            <button id="switch-lang" onclick="textManager.switchLanguage()">ru / no</button>
+            <div class="canvas-container">
+                <div class="blur-layer"></div>
+                <canvas id="myCanvas"></canvas>
+            </div>
+        </div>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
